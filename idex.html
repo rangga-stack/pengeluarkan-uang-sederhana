@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelacak Keuangan Pribadi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pelacak Keuangan Pribadi</h1>
+
+        <div class="dashboard-ringkasan">
+            <div class="card">
+                <h3>Saldo Saat Ini</h3>
+                <h2 id="saldo">Rp 0</h2>
+            </div>
+            <div class="card pemasukan">
+                <h3>Total Pemasukan</h3>
+                <p id="total-pemasukan">Rp 0</p>
+            </div>
+            <div class="card pengeluaran">
+                <h3>Total Pengeluaran</h3>
+                <p id="total-pengeluaran">Rp 0</p>
+            </div>
+        </div>
+
+        <form id="form-transaksi">
+            <h3>Tambah Transaksi Baru</h3>
+            <div class="form-control">
+                <label for="deskripsi">Deskripsi</label>
+                <input type="text" id="deskripsi" placeholder="Masukkan deskripsi..." required>
+            </div>
+            <div class="form-control">
+                <label for="jumlah">Jumlah</label>
+                <input type="number" id="jumlah" placeholder="Masukkan jumlah..." required>
+            </div>
+            <div class="form-control">
+                <label for="tipe">Tipe Transaksi</label>
+                <select id="tipe">
+                    <option value="pemasukan">Pemasukan</option>
+                    <option value="pengeluaran">Pengeluaran</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Tambahkan Transaksi</button>
+        </form>
+
+        <div class="riwayat-transaksi">
+            <h3>Riwayat Transaksi</h3>
+            <ul id="daftar-transaksi" class="daftar">
+                <!-- Riwayat transaksi akan ditampilkan di sini oleh JavaScript -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
